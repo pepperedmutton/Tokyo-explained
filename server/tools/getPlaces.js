@@ -7,7 +7,7 @@ export default async function getPlaces(parameters){
     headers: {
       'Content-Type': 'application/json',
       "X-Goog-Api-Key": process.env.GOOGLE_MAPS_API_KEY,
-      "X-Goog-FieldMask": "places.displayName,places.name,places.location"
+      "X-Goog-FieldMask": "places.displayName,places.id,places.name,places.location"
     },
     body: JSON.stringify(parameters)
   }).then(res=>res.json());
