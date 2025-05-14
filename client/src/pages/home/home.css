@@ -1,67 +1,37 @@
-#fullPage{
+#Home{
+  height: calc(100vh - 60px);   /* account for fixed topbar */
+  margin-top: 60px; 
   width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #efe3e3;   /* Optional: background color */
+  background-color: #efe3e3;
 }
-#header {
-  height: 60px;
-  background-color: #333;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-#clickExplore,
-#clickLogin {
-  width: 250px;
+
+#clickExplore {
   height: 150px;
-  margin: 20px;
-  border-radius: 10px;
+  width: 300px;
+  background-image: url('/images/explorer.png');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  color: white;
-  font-size: 20px;
+  color: rgb(233, 213, 213);
+  font-size: 32px;
   font-weight: bold;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#clickExplore {
-  background-image: url('/images/explorer.png');
-  color:rgb(255, 255, 255);
-  font-size: 25px;
-  background-color: rgba(0, 0, 0, 0.581); /* black overlay */
-  background-blend-mode: overlay;      /* or multiply, screen, soft-light */
-}
 
-#clickLogin {
-  background-image: url('/images/tower.jpg');
-   color:rgb(255, 255, 255);
-  font-size: 25px;
-  background-color: rgba(0, 0, 0, 0.581); /* black overlay */
-  background-blend-mode: overlay;      /* or multiply, screen, soft-light */
-}
-
-#clickExplore:hover,
-#clickLogin:hover {
+#clickExplore:hover{
   transform: scale(1.05);
   filter: brightness(1.1);
 }

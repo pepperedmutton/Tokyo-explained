@@ -3,3 +3,8 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
+#fullPage{
+  width: 100vw;
+  height: auto;
+  background-color: #efe3e3;
+}
