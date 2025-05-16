@@ -13,6 +13,5 @@ export default function getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2) {
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
   const d = R * c;
-  console.log(lat1, lon1, lat2, lon2);
   return d; // in meters
 }

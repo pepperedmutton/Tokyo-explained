@@ -1,4 +1,4 @@
-/* Fullscreen layout for the signup page */
+
 #Signup {
   height: 100vh;
   width: 100vw;
@@ -7,10 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #fff3e0, #e1f5fe); /* light pastel gradient */
+  background: linear-gradient(135deg, #fff3e0, #e1f5fe);
 }
 
-/* Signup form container */
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -22,7 +21,6 @@
   width: 300px;
 }
 
-/* Title */
 .signup-form h2 {
   text-align: center;
   margin-bottom: 10px;
@@ -30,7 +28,6 @@
   color: #333;
 }
 
-/* Input styling */
 .signup-form input {
   padding: 12px;
   font-size: 16px;
@@ -44,7 +41,7 @@
   border-color: #007bff;
 }
 
-/* Button styling */
+
 .signup-form button {
   padding: 12px;
   font-size: 16px;
@@ -60,7 +57,7 @@
   background-color: #0056b3;
 }
 
-/* Optional: Link to login */
+
 .signup-form p {
   text-align: center;
   font-size: 14px;

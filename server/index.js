@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import identityRouter from "./routers/identityRouter.js";
 import restaurantRouter from "./routers/restaurants.js";
+import authMiddleware from "./tools/auth.js";
+import commentRouter from "./routers/commentRouter.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -22,6 +24,7 @@ app.get('/', (req, res) => {
 });
 app.use("/api/identity",identityRouter);
 app.use("/api/restaurants",restaurantRouter);
+app.use("/api/comment",commentRouter);
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

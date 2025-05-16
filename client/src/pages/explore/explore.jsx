@@ -61,7 +61,6 @@ function renderStars(rating) {
       {loading && <p>Loading...</p>}
       <div id="restaurantList">
         {restaurants.map((place, idx) => {
-          console.log(place.name)
           const distance = (location.latitude && location.longitude && place.location)
             ? getDistanceFromLatLonInMeters(
                 location.latitude,
@@ -72,7 +71,7 @@ function renderStars(rating) {
             : null;
 
           return (
-            <div className="restaurantCard" key={idx} onClick = {()=>{navigate(`restaurant:${place.name}`)}}>
+            <div className="restaurantCard" key={idx} onClick = {()=>{navigate(`/restaurant/${place.id}`)}}>
               <p className="restaurantName">{place.displayName?.text || "Unnamed Place"}</p>
               {distance && (
                 <p className="restaurantDistance">{formatDistance(distance)} away</p>

@@ -11,6 +11,5 @@ export default async function detailedInfo(parameters,id){
       "X-Goog-FieldMask": "*"
     },
   }).then(res=>res.json())
-  console.log(h);
   return h;
 }

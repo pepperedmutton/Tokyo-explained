@@ -27,7 +27,7 @@ export default function Signup() {
     const data = await response.json();
     console.log(data);
 
-    if (data.status === "success") {
+    if (data.message === "Signup successful") {
       navigate('/login');
     } else {
       alert(data.message || "Signup failed.");
