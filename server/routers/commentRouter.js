@@ -12,7 +12,6 @@ const commentRouter = express.Router();
 commentRouter.post("/:target",authMiddleware,async (req, res) => {
     const comment = req.body.content;
     const user = jwt.verify(req.headers.authorization, process.env.JWT_SECRET);
-    console.log(user); // you can use user.id or user.username if available
 
     const [saved] = await knex('comment')
       .insert({
